@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Stack;
 
 class StringCalculator{
@@ -19,6 +20,7 @@ class StringCalculator{
 		}
 		double result = 0.0;
 		try {
+			System.out.println(Arrays.toString(postFix_exp));
 			Stack<Double>digit= new Stack<Double>();
 			for(int i = 0; i < postFix_exp.length; i++) {
 				try {

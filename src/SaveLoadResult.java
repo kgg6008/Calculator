@@ -47,6 +47,9 @@ class SaveLoadResult {
 				System.out.println("파일이 존재하지 않습니다.");
 			}
 		}
+		else {
+			System.out.println("비밀 번호가 틀렸습니다.");
+		}
 	}
 	public void loadHelp() {//도움말불러오기
 		try {

@@ -1,4 +1,5 @@
 import java.util.*;
+import java.text.DecimalFormat;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 public class ToPostfix extends Stack<String>{
@@ -55,7 +56,7 @@ public class ToPostfix extends Stack<String>{
 					digit = temp.substring(temp.indexOf('(') + 1, temp.indexOf(')'));
 					calc.setExpression(digit);
 					double changed = Double.parseDouble(calc.calculateStr());
-					digit = Double.toString(Math.log(changed));
+					digit = Math.log(changed)+"";
 					expression = expression.substring(0,m_start) + digit + expression.substring(m_end,expression.length());
 					match[i] = log_p.matcher(expression);
 				}
@@ -71,7 +72,12 @@ public class ToPostfix extends Stack<String>{
 					digit = temp.substring(temp.indexOf('(') + 1, temp.indexOf(')'));
 					calc.setExpression(digit);
 					double changed = Double.parseDouble(calc.calculateStr());
-					digit = Double.toString(Math.tan(changed));
+					if(Math.tan(changed) < 0.000000000000000001) {
+						digit = "0";
+					}
+					else {
+						digit = Math.tan(changed)+"";
+					}
 					expression = expression.substring(0,m_start) + digit + expression.substring(m_end,expression.length());
 					match[i] = tan_p.matcher(expression);
 				}
@@ -87,7 +93,13 @@ public class ToPostfix extends Stack<String>{
 					digit = temp.substring(temp.indexOf('(') + 1, temp.indexOf(')'));
 					calc.setExpression(digit);
 					double changed = Double.parseDouble(calc.calculateStr());
-					digit = Double.toString(Math.sin(changed));
+					if (Math.sin(changed)<0.000000000000000001) {
+						digit ="0";
+					}
+					else {
+						digit = Math.sin(changed)+"";
+					}
+					
 					expression = expression.substring(0,m_start) + digit + expression.substring(m_end,expression.length());
 					match[i] = sin_p.matcher(expression);
 				}
@@ -103,7 +115,12 @@ public class ToPostfix extends Stack<String>{
 					digit = temp.substring(temp.indexOf('(') + 1, temp.indexOf(')'));
 					calc.setExpression(digit);
 					double changed = Double.parseDouble(calc.calculateStr());
-					digit = Double.toString(Math.cos(changed));
+					if(Math.cos(changed) < 0.000000000000000001) {
+						digit = "0";
+					}
+					else {
+						digit = Math.cos(changed)+"";
+					}
 					expression = expression.substring(0,m_start) + digit + expression.substring(m_end,expression.length());
 					match[i] = cos_p.matcher(expression);
 				}
@@ -134,7 +151,7 @@ public class ToPostfix extends Stack<String>{
 					digit = temp.substring(temp.indexOf('(') + 1, temp.indexOf(')'));
 					calc.setExpression(digit);
 					double changed = Double.parseDouble(calc.calculateStr());
-					digit = Double.toString(Math.sqrt(changed));
+					digit = Math.sqrt(changed)+"";
 					expression = expression.substring(0,m_start) + digit + expression.substring(m_end,expression.length());
 					match[i] = sqrt_p.matcher(expression);
 				}
@@ -150,7 +167,7 @@ public class ToPostfix extends Stack<String>{
 					digit = temp.substring(temp.indexOf('(') + 1, temp.indexOf(')'));
 					calc.setExpression(digit);
 					double changed = Double.parseDouble(calc.calculateStr());
-					digit = Double.toString(Math.exp(changed));
+					digit = Math.exp(changed)+"";
 					expression = expression.substring(0,m_start) + digit + expression.substring(m_end,expression.length());
 					match[i] = exp_p.matcher(expression);
 				}
@@ -226,11 +243,11 @@ public class ToPostfix extends Stack<String>{
 				postFixArray.add(pop());
 			}
 			String[] changedPostfix = postFixArray.toArray(new String[postFixArray.size()]);//arraylist to array
-			System.out.println(Arrays.deepToString(changedPostfix));
+			//System.out.println(Arrays.deepToString(changedPostfix));
 			return changedPostfix;
 		}
 		catch(Exception e) {//error occured
-			System.out.println("잘못 입력하셨습니다. 입력값: [" + origin_exp + "]을 확인해 주세요.");
+			System.out.println("here잘못 입력하셨습니다. 입력값: [" + origin_exp + "]을 확인해 주세요.");
 			return null;
 		}
 	}

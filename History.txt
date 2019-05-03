@@ -1,1 +1,12 @@
-sin(pi/2) + 1/2*7+(4+3) = 11.5
+sin(60)+ cos(30) = 에러 발생: sin(60)+ cos(30)확인해 주세요.
+sin(30) + sin(60) = 에러 발생: sin(30) + sin(60)확인해 주세요.
+sin(3) + cos(6) = 1.1012902947102332
+sin(pi/2) + cos(pi/2) = 에러 발생: sin(pi/2) + cos(pi/2)확인해 주세요.
+sin(pi/2) + cos(pi/2) = 에러 발생: sin(pi/2) + cos(pi/2)확인해 주세요.
+sin(pi/2) + cos(pi/2) = 1.2
+sin(pi/2)+cos(pi/2) = 에러 발생: sin(pi/2)+cos(pi/2)확인해 주세요.
+sin(pi/2)+cos(pi/2) = 에러 발생: sin(pi/2)+cos(pi/2)확인해 주세요.
+sin = sin
+sin(pi/6)+cos(pi/3) = 1.0
+n = n
+sin(pi/2) + cos(pi/2) = 1.0

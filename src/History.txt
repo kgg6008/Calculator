@@ -1,0 +1,7 @@
+sin(po) = null
+sin(pi/2) + cos(pi/2) * 6 / 3 +(1+2) = 에러 발생: sin(pi/2) + cos(pi/2) * 6 / 3 +(1+2)확인해 주세요.
+sin(pi/2) = 1.0
+sin(pi/2) + cos(pi/2) * 6 / 3 +(1+2) = 에러 발생: sin(pi/2) + cos(pi/2) * 6 / 3 +(1+2)확인해 주세요.
+sin(pi/2) + cos(pi/2) * 6 / 3 = 에러 발생: sin(pi/2) + cos(pi/2) * 6 / 3확인해 주세요.
+sin(pi/2) + cos(pi/2)  = 에러 발생: sin(pi/2) + cos(pi/2) 확인해 주세요.
+sin(30) + cos(6) = 에러 발생: sin(30) + cos(6)확인해 주세요.
